@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h2 class="m-5" style="text-align: center;">詳細</h2>
+<div class="card w-50 mb-3" style="margin: auto;">
+    <div class="card-body">
+      <h2 class="card-title">{{ memo.title }}</h2>
+      <p class="card-text">{{ memo.content }}</p>
+      <a href="/update/{{ memo.id }}" role="button" class="btn btn-success btn-sm">更新</a>
+      <a href="/top" role="button" class="btn btn-secondary btn-sm">戻る</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form class="m-5" action="/update/{{ memo.id }}" method="post">
+    <div class="form-group pb-3">
+        <label for="title" class="form-label">タイトル</label>
+        <input type="text" class="form-control" name="title" value="{{ memo.title }}" required>
+    </div>
+    <div class="form-group pb-3">
+        <label for="content" class="form-label">内容</label>
+        <input type="text" class="form-control" name="content" value="{{ memo.content }}" required>
+      </div>
+    <input type="submit" value="更新" class="btn btn-outline-primary">
+    <a href="/detail/{{ memo.id }}" role="button" class="btn btn-outline-secondary">戻る</a>
+</form>
+{% endblock %}
+
+
+

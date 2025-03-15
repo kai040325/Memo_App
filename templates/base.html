@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <title>Memo App</title>
+    {% block head %}{% endblock %}
+</head>
+<body class="bg-light">
+    <nav class="navbar" style="background-color: #e3f2fd;" >
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/" style="font-size: 1.8rem;">📒 メモアプリ</a>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        {% block body %}{% endblock %}
+    </main>
+
+    <footer class="text-center py-3 mt-5 bg-white shadow-sm">
+        <small>&copy; 2025 Memo App. All rights reserved.</small>
+    </footer>
+</body>
+</html>
